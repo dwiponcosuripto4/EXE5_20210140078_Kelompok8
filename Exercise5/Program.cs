@@ -19,9 +19,10 @@ namespace Exercise5
         }
         internal class LinkListQueue
         {
-            Node Dwiponco;
-            Node Suripto;
+            Node dwiponco;
+            Node suripto;
+
+            
         }
-        
     }
 }
