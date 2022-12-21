@@ -17,12 +17,12 @@ namespace Exercise5
             next = null;
 
         }
-        internal class LinkListQueue
+        internal class QueueLinkList
         {
             Node dwiponco;
             Node suripto;
 
-            public LinkListQueue()
+            public QueueLinkList()
             {
                 dwiponco = suripto = null;
             }
@@ -65,6 +65,33 @@ namespace Exercise5
                     current = current.next;
                 }
                 Console.WriteLine();
+            }
+            static void Main(string[] args)
+            {
+                QueueLinkList myQueue = new QueueLinkList();
+                char ch;
+
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Menu");
+                        Console.WriteLine("1. Implement Insert Operation");
+                        Console.WriteLine("2. Implement delete operation");
+                        Console.WriteLine("3. Display values");
+                        Console.WriteLine("4. Exit");
+                        Console.Write("\nEnter your choice (1-4): ");
+                        ch = Convert.ToChar(Console.ReadLine());
+                        Console.WriteLine();
+                        while(ch)
+                        {
+                            case '1':
+                            {
+                                Console.Write("Enter a data: ");
+                            }
+                        }
+                    }
+                }
             }
         }
     }
