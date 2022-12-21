@@ -83,13 +83,37 @@ namespace Exercise5
                         Console.Write("\nEnter your choice (1-4): ");
                         ch = Convert.ToChar(Console.ReadLine());
                         Console.WriteLine();
-                        while(ch)
+                        switch(ch)
                         {
                             case '1':
-                            {
-                                Console.Write("Enter a data: ");
-                            }
+                                {
+                                    Console.Write("Enter a data: ");
+                                    string item = Console.ReadLine();
+                                    myQueue.Insert(item);
+                                }
+                                break;
+                            case '2':
+                                {
+                                    myQueue.Delete();
+                                }
+                                break;
+                            case '3':
+                                {
+                                    myQueue.Display();
+                                }
+                                break;
+                            case '4':
+                                return;
+                            default:
+                                {
+                                    Console.WriteLine("Invalid option");
+                                }
+                                break;
                         }
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Check for the data entered");
                     }
                 }
             }
