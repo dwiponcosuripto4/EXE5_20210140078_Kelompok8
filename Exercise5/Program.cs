@@ -24,12 +24,23 @@ namespace Exercise5
 
             public LinkListQueue()
             {
-                this.dwiponco = this.suripto = null;
+                dwiponco = suripto = null;
             }
-            internal void Insert(int item)
+            void Insert(int item)
             {
                 Node newNode = new Node(item);
+                if (suripto == null)
+                {
+                    dwiponco = suripto = newNode;
+                }
+                else
+                {
+                    suripto.next = newNode;
+                    suripto = newNode;
+                }
+                Console.WriteLine("{0} inseted into Queue", item);
             }
+            
         }
     }
 }
