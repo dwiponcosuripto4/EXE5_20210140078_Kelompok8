@@ -8,10 +8,10 @@ namespace Exercise5
 {
     internal class Node
     {
-        internal int data;
+        internal string data;
         internal Node next;
 
-        public Node(int d)
+        public Node(string d)
         {
             data = d;
             next = null;
@@ -26,7 +26,7 @@ namespace Exercise5
             {
                 dwiponco = suripto = null;
             }
-            void Insert(int item)
+            void Insert(string item)
             {
                 Node newNode = new Node(item);
                 if (suripto == null)
@@ -39,6 +39,17 @@ namespace Exercise5
                     suripto = newNode;
                 }
                 Console.WriteLine("{0} inseted into Queue", item);
+            }
+            void Delete()
+            {
+                if (dwiponco == null)
+                {
+                    Console.WriteLine("The queue is empty");
+                    return;
+                }
+                Node current = dwiponco;
+                dwiponco = dwiponco.next;
+                Console.WriteLine("Item deleted is (0)", current.data);
             }
             
         }
