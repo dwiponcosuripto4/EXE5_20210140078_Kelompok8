@@ -26,7 +26,10 @@ namespace Exercise5
             {
                 this.dwiponco = this.suripto = null;
             }
-            
+            internal void Insert(int item)
+            {
+                Node newNode = new Node(item);
+            }
         }
     }
 }
