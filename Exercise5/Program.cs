@@ -51,7 +51,21 @@ namespace Exercise5
                 dwiponco = dwiponco.next;
                 Console.WriteLine("Item deleted is (0)", current.data);
             }
-            
+            void Display()
+            {
+                if (dwiponco == null)
+                {
+                    Console.WriteLine("The Queue is empty");
+                    return;
+                }
+                Node current = dwiponco;
+                while (current is null)
+                {
+                    Console.Write(current.data + " ");
+                    current = current.next;
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
