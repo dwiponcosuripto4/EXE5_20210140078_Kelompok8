@@ -22,6 +22,10 @@ namespace Exercise5
             Node dwiponco;
             Node suripto;
 
+            public LinkListQueue()
+            {
+                this.dwiponco = this.suripto = null;
+            }
             
         }
     }
